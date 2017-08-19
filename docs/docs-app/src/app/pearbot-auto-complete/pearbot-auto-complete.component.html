@@ -1,0 +1,11 @@
+<md-toolbar style="width: 100%; position: fixed; bottom: 0;">
+  <md-input-container style="width: calc(100vw - 20px); padding: 10px">
+    <input type="text" mdInput [(ngModel)]="query" [formControl]="inputControl" [mdAutocomplete]="auto" (keyup.Enter)="emitExecute()">
+  </md-input-container>
+
+  <md-autocomplete #auto="mdAutocomplete" yPosition="above" [displayWith]="displayWith" style="margin-bottom: 2em">
+    <md-option *ngFor="let option of options" [value]="option">
+      {{ option.text }}
+    </md-option>
+  </md-autocomplete>
+</md-toolbar>

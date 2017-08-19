@@ -1,0 +1,36 @@
+{
+  "name": "pearbot",
+  "version": "0.0.1",
+  "description": "A light-weight, dead-simple, chatbot framework with autocomplete.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "test": "jest",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Gabe Pearhill",
+  "license": "MIT",
+  "dependencies": {
+    "@types/fuse": "^2.5.1",
+    "fuse.js": "^3.0.5",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.7",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.10",
+    "typescript": "^2.4.2"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/src/tests/.*|\\.(test|spec))\\.(ts)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}

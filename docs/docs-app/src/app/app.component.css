@@ -1,0 +1,15 @@
+.messageChip {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user {
+  background-color: lightblue;
+  margin-right: 60px;
+}
+
+.bot {
+  background-color: lightgrey;
+  margin-left: 60px;
+}

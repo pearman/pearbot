@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<md-toolbar color="primary">Pearbot</md-toolbar>
+<div style="height: calc(100vh - 128px); width: 100%; overflow: auto">
+  <div *ngFor="let message of messages" [class]="message.user ? 'messageChip user' : 'messageChip bot'" [style.textAlign]="message.user ? 'left' : 'right'">
+    {{message.message}}
+  </div>
+</div>
+<pearbot-auto-complete [pearbot]="pearbot" (execute)="execute($event)"></pearbot-auto-complete>
