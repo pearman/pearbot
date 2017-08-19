@@ -18,7 +18,6 @@ export class PearbotAutoCompleteComponent implements OnInit {
   options = [];
 
   ngOnInit() {
-    this.options = this.pearbot.getAllQueries();
     this.inputControl.valueChanges.subscribe(val => {
       if (!val) this.options = this.pearbot.getAllQueries();
       else if (_.isObject(val))
